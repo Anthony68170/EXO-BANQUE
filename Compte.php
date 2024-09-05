@@ -1,3 +1,4 @@
+<!-- CODE COMPTE -->
 <?php
 
 Class Compte{
@@ -7,4 +8,10 @@ Class Compte{
     private $_titulaire;
 }
 
-public function __construct($libell, $solde, $devise, $titulaire)
+public function __construct($libell, $solde, $devise, $titulaire){
+    $this->_libell = $libell;
+    $this -> _solde = $solde;
+    $this -> _devise = $devise;
+    $this -> _titulaire = $titulaire;
+    $titulaire -> ajouterCompte($this);
+}
