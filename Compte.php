@@ -61,25 +61,25 @@ Class Compte{
     
 
 // Méthode DEBITER le compte
-    public function dediterCompte($deb){
-        if $this ->solde = $deb{
+    // public function dediterCompte($deb){
+    //     if $this ->solde = $deb{
+    //     }
 
-        }
-        echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
-        else {
-            # code...
-        }
-        }
+    //     echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
+    //     else {
+    //         # code...
+    //     }
+    //     }
 
 // Méthode SOLDE a calculer 
-        public function calculSolde($libell){
-            $this ->solde =     $solde;
-        }
+        // public function calculSolde($libell){ // Il faut utiliser un "setter" parce qu'il faut modifier l'objet
+        //     $this ->solde =     $solde;
+        // }
 
 // Méthode VIREMENT vers le compte d'un titulaire
-        public function virementCompte ($libell){
+        // public function virementCompte ($libell){
             
-        }
+        // }
 }
 
 

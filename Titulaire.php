@@ -15,31 +15,34 @@ class Titulaire{
         $this -> _dateNaissance = $dateNaissance; // je transforme le string injecté en argument en objet date 
         $this -> _ville = $ville;
         
-        //Stock les comptes du titulaire
+//Stock les comptes du titulaire
         $this->_comptes = array();// le TABLEAU A INITILALISER VIDE de livre est à la base un tableai vide
     }
 
-public function calculAge(){ //
+    public function calculAge(){ //
 // UTILISER DateTimme NOW et DateInterval / je fais une soustraction entre l'objet date de naissance et date du jour 
-    $dateNaissance = new DateTime($this -> _dateNaissance = $dateNaissance);
-}
+        $dateNaissance = new DateTime($this -> _dateNaissance = $dateNaissance);
+        $aujourdhui = new DateTime();
+        $difference = $dateNaissance-$aujourdhui;
+        return $difference;
+    }
 
 // https://stackoverflow.com/questions/676824/how-to-calculate-the-difference-between-two-dates-using-php
 
 
-    public function ajouterCompte($compte){ // NOmmer la function
+    public function ajouterCompte(){ // NOmmer la function
         $this -> _comptes[] = $compte; // ici on créé un TABLEAU VIDE pour cette fonction
-    }// en lui demandant d'enregistrer UNE LISTRE DES COMPTES
+    } // en lui demandant d'enregistrer UNE LISTRE DES COMPTES
 
 
     public function afficherComptes(){ //PARCOURIR LES COMPTES DU TITULAIRE
         // cete fonction fait ne boucle avec foreach sur les comptes du titulaire 
-        echo "Compte(s) de " .$this->$titulaire; // Afficher la phrase de présentation de l'afficahge des comptes du titulaire
+        echo "Compte(s) de " .$this->__toString(); // Afficher la phrase de présentation de l'afficahge des comptes du titulaire
         foreach ($this -> _comptes as $compte) { // Pour parcourir chaque compte du tableau
             # code...
         }
-            echo _comptes->__toString($titulaire); //Afficher le tableau des COMPTES du titulaire
-    }
+            echo $compte->__toString(); //Afficher le tableau des COMPTES du titulaire
+    } //__toString pour appeler/afficher UN titulaire
 
     public function getPrenom(){
         return $this->_prenom;
