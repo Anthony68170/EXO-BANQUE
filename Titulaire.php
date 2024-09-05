@@ -23,10 +23,10 @@ $this -> _comptes[] = $compte;
     }
     public function afficherComptes(){ //PARCOURIR LES COMPTES DU TITULAIRE
         // cete fonction fait ne boucle avec foreach sur les comptes du titulaire 
-        echo "Compte(s) de " .$this->$titulaire; // Afficher la phrase de présentation de l'afficahge des comptes
+        echo "Compte(s) de " .$this->$titulaire; // Afficher la phrase de présentation de l'afficahge des comptes du titulaire
         foreach ($this -> _comptes as $compte) { // Pour parcourir chaque compte du tableau
             # code...
-            echo _comptes->__toString($compte); //Afficher le tableau COMPTES du titulaire
+            echo _comptes->__toString($titulaire); //Afficher le tableau des COMPTES du titulaire
         }
 
         public function getPrenom(){
@@ -40,3 +40,5 @@ $this -> _comptes[] = $compte;
             }
     }
 }
+
+

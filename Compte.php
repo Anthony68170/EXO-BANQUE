@@ -52,4 +52,17 @@ Class Compte{
     public function __toString(){
     return $this->_libell . " : " . $this->_solde . "€. (" . $this->_devise . ") " . $this->_titulaire . ": ";
     }
+    
+    public function crediterCompte(){
+        echo "Crédit de " .$this->$titulaire;
+        foreach ($variable as $key => $value) {
+            # code...
+        }
+    }
 }
+
+
+// Sur un compte bancaire, on doit pouvoir :
+// Créditer le compte de X euros
+// Débiter le compte de X euros
+// Effectuer un virement d'un compte à l'autre.
