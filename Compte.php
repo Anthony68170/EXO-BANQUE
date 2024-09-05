@@ -58,17 +58,17 @@ Class Compte{
         $this -> _solde + $somme;
         echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
-    }
+    
 
         // Méthode pour déditer le compte
-        public function dediterCompte($deb){
-            $this ->solde - $deb;
-            echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
-            }
+    public function dediterCompte($deb){
+        $this ->solde - $deb;
+        echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
         }
+
 }
 
-
+var_dump($compte);
 // Sur un compte bancaire, on doit pouvoir :
 // Créditer le compte de X euros
 // Débiter le compte de X euros
