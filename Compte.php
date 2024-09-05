@@ -15,7 +15,7 @@ Class Compte{
         $titulaire -> ajouterCompte($this); // Pour ajouter un compte à la liste (au tableau)
     }
 
-    //GETTERS
+//GETTERS
     public function getLibell(){
         return $this -> _libell;
     }
@@ -32,7 +32,7 @@ Class Compte{
         return $this -> _titulaire;
     }
 
-    // SETTERS
+// SETTERS
     public function setLibell($libell){
     $this -> _libell;
     }
@@ -50,26 +50,34 @@ Class Compte{
     }
 
     public function __toString(){
-        return $this->_libell . " : " . $this->_solde . " " . $this->_devise . " (Titulaire : " . $this->_titulaire . ")";
+        return $this->_libell . " : " . $this->_solde . " " . $this->_devise . " (Client : " . $this->_titulaire . ")";
     }
     
-    // Méthode pour créditer le compte
+// Méthode CREDITER le compte
     public function crediterCompte($somme){
         $this -> _solde + $somme;
         echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
     
 
-        // Méthode pour déditer le compte
+// Méthode DEBITER le compte
     public function dediterCompte($deb){
         if $this ->solde = $deb{
 
         }
         echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
+        else {
+            # code...
+        }
         }
 
-        // Méthode pour calucler le solde
+// Méthode SOLDE a calculer 
         public function calculSolde($libell){
+            $this ->solde =     $solde;
+        }
+
+// Méthode VIREMENT vers le compte d'un titulaire
+        public function virementCompte ($libell){
             
         }
 }
