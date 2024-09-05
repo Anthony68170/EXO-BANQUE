@@ -54,18 +54,16 @@ Class Compte{
     }
     
     // Méthode pour créditer le compte
-    public function crediterCompte(){
-        echo "Crédit de " .$this->$titulaire;
-        foreach ($variable as $key => $value) {
-            # code...
+    public function crediterCompte($somme){
+        $this -> _solde + $somme;
+        echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
     }
 
         // Méthode pour déditer le compte
-        public function dediterCompte(){
-            echo "Dédit de " .$this->$titulaire;
-            foreach ($variable as $key => $value) {
-                # code...
+        public function dediterCompte($deb){
+            $this ->solde - $deb;
+            echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
             }
         }
 }
