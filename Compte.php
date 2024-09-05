@@ -12,7 +12,7 @@ Class Compte{
         $this -> _solde = $solde;
         $this -> _devise = $devise;
         $this -> _titulaire = $titulaire;
-        $titulaire -> ajouterCompte($this);
+        $titulaire -> ajouterCompte($this); // Pour ajouter un compte à la liste (au tableau)
     }
 
     //GETTERS
@@ -37,15 +37,15 @@ Class Compte{
     return $this -> _libell;
     }
 
-    public function setSolde(){
+    public function setSolde($solde){
     return $this -> _solde;
     }
 
-    public function setDevise(){
+    public function setDevise($devise){
     return $this -> _devise;
     }
 
-    public function setTitulaire(){
+    public function setTitulaire($tiutlaire){
     return $this -> _titulaire;
     }
 
@@ -53,12 +53,21 @@ Class Compte{
     return $this->_libell . " : " . $this->_solde . "€. (" . $this->_devise . ") " . $this->_titulaire . ": ";
     }
     
+    // Méthode pour créditer le compte
     public function crediterCompte(){
         echo "Crédit de " .$this->$titulaire;
         foreach ($variable as $key => $value) {
             # code...
         }
     }
+
+        // Méthode pour déditer le compte
+        public function dediterCompte(){
+            echo "Dédit de " .$this->$titulaire;
+            foreach ($variable as $key => $value) {
+                # code...
+            }
+        }
 }
 
 
