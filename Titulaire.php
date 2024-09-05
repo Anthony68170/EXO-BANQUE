@@ -4,23 +4,29 @@
 class Titulaire{
     private string $_prenom;
     private string $_nom;
-    private string $_dateNaissance;
+    private string $_dateNaissance; // cette propriété n'est pas un string mais un objet date
     private string $_ville;
     private array $_comptes; // TABLEAU des COMPTES bancaires
 
-
-    public function __construct($prenom, $nom,){// Initialiser propriétés du TITULAIRE
+// $dateNaiissance à la ligne 12 est un string 
+    public function __construct($prenom, $nom, $dateNaissance, $ville){// Initialiser propriétés du TITULAIRE
         $this -> _prenom = $prenom;
         $this -> _nom = $nom;
-        $this -> _dateNaissance = $dateNaissance;
+        $this -> _dateNaissance = $dateNaissance; // je transforme le string injecté en argument en objet date 
         $this -> _ville = $ville;
         
         //Stock les comptes du titulaire
         $this->_comptes = array();// le TABLEAU A INITILALISER VIDE de livre est à la base un tableai vide
     }
 
+public function calculAge(){ //
+// je fais une soustraction entre l'objet date de naissance et date du jour 
+}
 
-    public function ajouterCompte($_comptes){ // NOmmer la function
+// https://stackoverflow.com/questions/676824/how-to-calculate-the-difference-between-two-dates-using-php
+
+
+    public function ajouterCompte($compte){ // NOmmer la function
         $this -> _comptes[] = $compte; // ici on créé un TABLEAU VIDE pour cette fonction
     }// en lui demandant d'enregistrer UNE LISTRE DES COMPTES
 
@@ -40,11 +46,16 @@ class Titulaire{
     public function getNom(){
         return $this->_nom;
     }
+
+    public function getdateNaissance($age){
+        return $this->_nom;
+    }
     public function __toString(){ //toSTRING RETOURNE PRENOM ET NOM par la function public
         return $this->_prenom . " " . $this->_nom;
     }
 
 }
-}
+
+
 
 

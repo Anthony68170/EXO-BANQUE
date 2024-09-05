@@ -68,8 +68,9 @@ Class Compte{
 
 }
 
-var_dump($compte);
+
 // Sur un compte bancaire, on doit pouvoir :
 // Créditer le compte de X euros
 // Débiter le compte de X euros
 // Effectuer un virement d'un compte à l'autre.
+
