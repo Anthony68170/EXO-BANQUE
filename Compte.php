@@ -34,23 +34,23 @@ Class Compte{
 
     // SETTERS
     public function setLibell($libell){
-    return $this -> _libell;
+    $this -> _libell;
     }
 
     public function setSolde($solde){
-    return $this -> _solde;
+    $this -> _solde;
     }
 
     public function setDevise($devise){
-    return $this -> _devise;
+    $this -> _devise;
     }
 
     public function setTitulaire($tiutlaire){
-    return $this -> _titulaire;
+    $this -> _titulaire;
     }
 
     public function __toString(){
-    return $this->_libell . " : " . $this->_solde . "€. (" . $this->_devise . ") " . $this->_titulaire . ": ";
+        return $this->_libell . " : " . $this->_solde . " " . $this->_devise . " (Titulaire : " . $this->_titulaire . ")";
     }
     
     // Méthode pour créditer le compte
@@ -62,10 +62,16 @@ Class Compte{
 
         // Méthode pour déditer le compte
     public function dediterCompte($deb){
-        $this ->solde - $deb;
+        if $this ->solde = $deb{
+
+        }
         echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
         }
 
+        // Méthode pour calucler le solde
+        public function calculSolde($libell){
+            
+        }
 }
 
 

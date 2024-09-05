@@ -20,7 +20,8 @@ class Titulaire{
     }
 
 public function calculAge(){ //
-// je fais une soustraction entre l'objet date de naissance et date du jour 
+// UTILISER DateTimme NOW et DateInterval / je fais une soustraction entre l'objet date de naissance et date du jour 
+    $dateNaissance = new DateTime($this -> _dateNaissance = $dateNaissance);
 }
 
 // https://stackoverflow.com/questions/676824/how-to-calculate-the-difference-between-two-dates-using-php
