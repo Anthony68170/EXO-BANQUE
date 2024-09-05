@@ -8,6 +8,7 @@ class Titulaire{
     private string $_ville;
     private array $_comptes; // TABLEAU des COMPTES bancaires
 
+
     public function __construct($prenom, $nom,){// Initialiser propriétés du TITULAIRE
         $this -> _prenom = $prenom;
         $this -> _nom = $nom;
@@ -18,9 +19,12 @@ class Titulaire{
         $this->_comptes = array();// le TABLEAU A INITILALISER VIDE de livre est à la base un tableai vide
     }
 
-    public function ajouterCompte($_comptes){
-        $this -> _comptes[] = $compte;
-    }
+
+    public function ajouterCompte($_comptes){ // NOmmer la function
+        $this -> _comptes[] = $compte; // ici on créé un TABLEAU VIDE pour cette fonction
+    }// en lui demandant d'enregistrer UNE LISTRE DES COMPTES
+
+
     public function afficherComptes(){ //PARCOURIR LES COMPTES DU TITULAIRE
         // cete fonction fait ne boucle avec foreach sur les comptes du titulaire 
         echo "Compte(s) de " .$this->$titulaire; // Afficher la phrase de présentation de l'afficahge des comptes du titulaire
@@ -29,7 +33,7 @@ class Titulaire{
         }
             echo _comptes->__toString($titulaire); //Afficher le tableau des COMPTES du titulaire
     }
-    
+
     public function getPrenom(){
         return $this->_prenom;
     }
