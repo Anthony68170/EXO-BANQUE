@@ -20,7 +20,15 @@ $compte2 = new Compte("Compte courant", 874, "euros", $titulaire2);
 $compte3 = new Compte("Compte courant", 400, "francs suisse", $titulaire3);
 $compte4 = new Compte("Compte courant", 8690.54, "dollars", $titulaire4);
 
-// var_dump($compte2);
+
+// effectuer un virement
+$compte1 -> virement(100, $compte2);
+
+// afficher le nouveau solde
+echo "Nouveau solde de" . $titulaire1 ;
+echo "Nouveau solde de" . $titulaire1 ;
+
+var_dump($compte2);
 // var_dump($titulaire2);
 // var_dump($dateNaissance);
 

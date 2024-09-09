@@ -21,7 +21,7 @@ Class Compte{
     }
 
     public function getSolde(){
-        return $this -> _solde;
+        return $this -> _solde . " " . $this->_devise;
     }
 
     public function getDevise(){
@@ -34,7 +34,7 @@ Class Compte{
 
 // SETTERS
     public function setLibell($libell){
-    $this -> _libell;
+    $this -> _libell = $libell;
     }
 
     public function setSolde($solde){
@@ -55,21 +55,24 @@ Class Compte{
     
 // Méthode CREDITER le compte
     public function crediterCompte($somme){
-        $this -> _solde + $somme;
-        return $result;
+        $this -> _solde += $somme;
+      
         echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
     
 
 // Méthode DEBITER le compte
     public function dediterCompte($somme){
-        if ($this -> _solde > $somme){
-            $this -> _solde - $somme;
+        if ($this -> _solde >= $somme){
+            $this -> _solde -= $somme;
             echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
+        }else{
+            echo "Solde insuffisant.";
         }
-        return $result;
-        echo "Votre solde est de " . $somme . " " . $this->_devise;
-        }
+    
+       
+        // echo "Votre solde est de " . $somme . " " . $this->_devise;
+        // }
     
 
     // public function dediterCompte($deb){
@@ -89,7 +92,21 @@ Class Compte{
 
 // Méthode VIREMENT vers le compte d'un titulaire
         // public function virementCompte ($libell){
-            
+            public function virement($montant, $compteDestinataire){
+                // Vérifie si compte en euros
+                if ($this->_devise == "euros" && $compteDestinataire -> getDevise() == "euros"){
+                // vérifier solde
+                if ($this -> _solde >= $montant){
+                    //Puis débiter le compte cible
+                    $this -> _solde - $montant;
+
+                    echo "Virement de " . $montant . " euros effectué vers " . $this->_titulaire->getPrenom() . " à " . $compteDestinataire->getTitulaire()->getPrenom() . ".<br>";
+        } else {
+            echo "Fonds insuffisants";
+        }
+    } else {
+        echo "Virement impossible. Devises différentes";
+    }
         // }
 }
 
