@@ -23,11 +23,14 @@ class Titulaire{
 // UTILISER DateTimme NOW et DateInterval / je fais une soustraction entre l'objet date de naissance et date du jour 
         $dateNaissance = new DateTime($this -> _dateNaissance);
         $aujourdhui = new DateTime(); // https://www.phpfacile.com/apprendre_le_php/dates_avec_classe_datetime
-        $age = $dateNaissance - $aujourdhui;
+        $age = $dateNaissance ->diff($aujourdhui) ;// $interval = $datetime1->diff($datetime2);
         return $age->y;
     } // https://www.php.net/manual/en/datetime.diff.php
-// 
-
+// MOEDELE EXEMPLE CALCUL DIFFERENCE ENTRE 2 DATES
+// $datetime1 = new DateTime('2009-10-11 12:12:00');
+// $datetime2 = new DateTime('2009-10-13 10:12:00');
+// $interval = $datetime1->diff($datetime2);
+// echo $interval->format('%Y-%m-%d %H:%i:%s');
 
     public function ajouterCompte(){ // NOmmer la function
         $this -> _comptes[] = $compte; // ici on créé un TABLEAU VIDE pour cette fonction
