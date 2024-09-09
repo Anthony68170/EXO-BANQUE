@@ -62,8 +62,11 @@ Class Compte{
 
 // Méthode DEBITER le compte
     public function dediterCompte($somme){
-        if ($this -> _solde - $somme)
+        if ($this -> _solde > $somme){
+            $this -> _solde - $somme
+        }
         ;
+        return $result;
         echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
     
