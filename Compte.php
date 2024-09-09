@@ -56,6 +56,7 @@ Class Compte{
 // Méthode CREDITER le compte
     public function crediterCompte($somme){
         $this -> _solde + $somme;
+        return $result;
         echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
     
@@ -63,11 +64,11 @@ Class Compte{
 // Méthode DEBITER le compte
     public function dediterCompte($somme){
         if ($this -> _solde > $somme){
-            $this -> _solde - $somme
+            $this -> _solde - $somme;
+            echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
         }
-        ;
         return $result;
-        echo "Votre compte est crédité de " . $somme . " " . $this->_devise;
+        echo "Votre solde est de " . $somme . " " . $this->_devise;
         }
     
 

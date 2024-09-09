@@ -32,7 +32,7 @@ class Titulaire{
 // $interval = $datetime1->diff($datetime2);
 // echo $interval->format('%Y-%m-%d %H:%i:%s');
 
-    public function ajouterCompte(){ // NOmmer la function
+    public function ajouterCompte($compte){ // NOmmer la function
         $this -> _comptes[] = $compte; // ici on créé un TABLEAU VIDE pour cette fonction
     } // en lui demandant d'enregistrer UNE LISTRE DES COMPTES
 

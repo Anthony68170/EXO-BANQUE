@@ -17,7 +17,7 @@ $titulaire4 = new Titulaire("Bruce", "SPRINGSTEEN", 23/9/1949, "New Jersey");
 // comptes
 $compte1 = new Compte("Compte courant", 244, "euros", $titulaire1);
 $compte2 = new Compte("Compte courant", 874, "euros", $titulaire2);
-$compte3 = new Compte("Compte courant", 400, "fraancs suisse", $titulaire3);
+$compte3 = new Compte("Compte courant", 400, "francs suisse", $titulaire3);
 $compte4 = new Compte("Compte courant", 8690.54, "dollars", $titulaire4);
 
 // var_dump($compte2);
