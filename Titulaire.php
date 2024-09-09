@@ -19,15 +19,14 @@ class Titulaire{
         $this->_comptes = array();// le TABLEAU A INITILALISER VIDE de livre est à la base un tableai vide
     }
 
-    public function calculAge(){ //
+    public function calculAge(){ //https://stackoverflow.com/questions/676824/how-to-calculate-the-difference-between-two-dates-using-php
 // UTILISER DateTimme NOW et DateInterval / je fais une soustraction entre l'objet date de naissance et date du jour 
-        $dateNaissance = new DateTime($this -> _dateNaissance = $dateNaissance);
-        $aujourdhui = new DateTime();
-        $difference = $dateNaissance-$aujourdhui;
-        return $difference;
-    }
-
-// https://stackoverflow.com/questions/676824/how-to-calculate-the-difference-between-two-dates-using-php
+        $dateNaissance = new DateTime($this -> _dateNaissance);
+        $aujourdhui = new DateTime(); // https://www.phpfacile.com/apprendre_le_php/dates_avec_classe_datetime
+        $age = $dateNaissance - $aujourdhui;
+        return $age->y;
+    } // https://www.php.net/manual/en/datetime.diff.php
+// 
 
 
     public function ajouterCompte(){ // NOmmer la function
