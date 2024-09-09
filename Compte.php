@@ -69,27 +69,9 @@ Class Compte{
         }else{
             echo "Solde insuffisant.";
         }
+    }
     
        
-        // echo "Votre solde est de " . $somme . " " . $this->_devise;
-        // }
-    
-
-    // public function dediterCompte($deb){
-    //     if $this ->solde = $deb{
-    //     }
-
-    //     echo "Votre compte est crédité de " . $deb . " " . $this->_devise;
-    //     else {
-    //         # code...
-    //     }
-    //     }
-
-// Méthode SOLDE a calculer 
-        // public function calculSolde($libell){ // Il faut utiliser un "setter" parce qu'il faut modifier l'objet
-        //     $this ->solde =     $solde;
-        // }
-
 // Méthode VIREMENT vers le compte d'un titulaire
         // public function virementCompte ($libell){
             public function virement($montant, $compteDestinataire){
@@ -108,6 +90,7 @@ Class Compte{
         echo "Virement impossible. Devises différentes";
     }
         // }
+}
 }
 
 
